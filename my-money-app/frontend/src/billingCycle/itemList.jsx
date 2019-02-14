@@ -40,15 +40,18 @@ class ItemList extends Component {
                 </If>
                 <td>
                     <button type="button" className="btn btn-success"
-                        onClick={() => this.add(index + 1)}>
+                        onClick={() => this.add(index + 1)}
+                        disabled={this.props.readOnly}>
                         <i className="fa fa-plus"></i>
                     </button>
                     <button type="button" className="btn btn-warning"
-                        onClick={() => this.add(index + 1, item)}>
+                        onClick={() => this.add(index + 1, item)}
+                        disabled={this.props.readOnly}>
                         <i className="fa fa-clone"></i>
                     </button>
                     <button type="button" className="btn btn-danger"
-                        onClick={() => this.remove(index)}>
+                        onClick={() => this.remove(index)}
+                        disabled={this.props.readOnly}>
                         <i className="fa fa-trash-o"></i>
                     </button>
                 </td>
